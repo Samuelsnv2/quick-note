@@ -1,0 +1,33 @@
+.note {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  background-color: #f9f7a9;
+  -webkit-box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.1);
+  height: 295px;
+}
+
+.noteTitle {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.noteDescription {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    overflow: hidden;
+}
+
+@media (min-width: 430px) {
+    .noteTitle {
+        font-size: 1.3rem;
+    }
+    .noteDescription {
+        font-size: 1.1rem;
+    }
+}
