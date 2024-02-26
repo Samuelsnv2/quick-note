@@ -1,0 +1,42 @@
+.noteModal {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding: 20px;
+  border-color: #fff;
+  border-radius: 11px;
+}
+
+.noteModalTitle {
+  font-size: 1rem;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.noteModalTitle,
+.noteModalDescription {
+  border-color: #dbdbdb;
+  border-style: solid;
+  border-width: 1.5px;
+  padding: 8px;
+  font-family: "Roboto", sans-serif;
+}
+
+.noteModalDescription {
+  font-weight: 300;
+  font-size: 0.9rem;
+
+  height: 40vh;
+  resize: none;
+  border-top: 0;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.noteModalButtons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+}

@@ -1,5 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
+import { Modal } from '@mui/material';
 import Note from '../../components/Note';
+import NoteModal from '../../components/NoteModal';
 import './Home.css';
 
 const notes = [
@@ -56,12 +58,26 @@ const notes = [
 ]
 
 function Home() {
+    const [viewNote, setViewNote] = useState();
+
+    function handleNoteClick(note) {
+        setViewNote(note);
+    }
+    function handleClose() {
+        setViewNote();
+    }
+
     return (
+        <>
         <div className="noteContainer">
             {notes.map(note => (
-                <Note key={note.id} note={note} />
+                <Note key={note.id} note={note} onClick={handleNoteClick} />
             ))}
         </div>
+        <Modal open={viewNote} onClose={handleClose} className="modalStyle">
+            <NoteModal />
+        </Modal>
+        </>
     );
 }
 
